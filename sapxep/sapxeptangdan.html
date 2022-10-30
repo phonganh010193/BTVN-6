@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arrNumber = [1, 25, 7, -7, -3, 12, -22, 0];
+
+    // // sap xep mang tang dan cach 1
+    // var newArr = arrNumber.sort(function(a, b) {
+    //     return a - b;
+    // });
+
+    // console.log('newArr', newArr);
+
+    // sap xep mang tang dan cach 2
+
+    function interChangeSort(array) {
+        for (let i = 0; i < array.length - 1; i++) {
+            for (let j = i + 1; j < array.length; j++){
+                if(array[j] < array[i]) {
+                    let item = array[i];
+                    array[i] = array[j]
+                    array[j] = item;
+                }
+            }
+        }
+        return array;
+    }
+
+
+
+    var kq = interChangeSort(arrNumber);
+    console.log('kq', kq);
+
+    </script>
+</body>
+</html>

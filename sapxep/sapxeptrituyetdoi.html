@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sap xep</title>
+</head>
+<body>
+    <p>sap xep</p>
+    <script>
+        var arrNumber = [1, 25, 7, -7, -3, 12, -22, 0];
+        // Sắp xếp dãy số tăng dần theo giá trị tuyệt đối
+        function interChangeSortAbs(array) {
+            for (let i = 0; i < array.length - 1; i++) {
+                for (let j = i + 1; j < array.length; j++){
+                    if(Math.abs(array[j]) <= Math.abs(array[i])) {
+                        let item = array[i];
+                        array[i] = array[j]
+                        array[j] = item;
+                    }
+                }
+            }
+            return array;
+        }
+
+        var kq = interChangeSortAbs(arrNumber);
+        console.log('kq', kq);
+    </script>
+</body>
+</html>

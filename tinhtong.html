@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh tong</title><br>
+
+</head>
+<body>
+    <form>
+        <label for="a">Nhap a:</label>
+        <input type="number" id="a" value=""><br>
+        <input type="button" id="btn-tt" value="tinh tong"><br>
+        <p id="demo"></p>
+
+    </form>
+    <script>
+        const button = document.getElementById("btn-tt");
+        button.onclick = function() {
+            let a = document.getElementById("a").value;
+            if(!a) {
+                alert('Missing a');
+            }
+            else {
+                TinhTong(a);
+            }
+        }
+        
+        function TinhTong(a) {
+            var b = 0;
+            for(let i = 0; i <= a; i++) {
+                b += i;
+                document.getElementById("demo").innerHTML = b;
+            }
+        }
+    </script>
+</body>
+</html>

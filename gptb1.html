@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giai Phuong Trinh Bac 1</title>
+</head>
+<body>
+    <form>
+        <label for="a">Nhap so a:</label>
+        <input type="number" id="a" name="a" value=""><br>
+        <label for="b">Nhap so b:</label>
+        <input type="number" id="b" name="b" value=""><br>
+        <input type="button" id="btn" value="TÌM NGHIỆM">
+    </form>
+    <script>
+        var button = document.getElementById("btn");
+        button.onclick = function() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            if(!a || !b) {
+                alert('Missing a, b');
+            }
+            else {
+                Gptb1(a, b);
+            }
+        }
+
+        function Gptb1(a, b) {
+            if(a == 0 && b == 0) {
+                alert('Phuong trinh vo so nghiem')
+            }
+            else if(a == 0 && b != 0) {
+                alert('Phuong trinh vo nghiem');
+            }
+            else if(a != 0 && b == 0) {
+                alert('Phuong trinh co nghiem x = 0');
+            }
+            else {
+                alert('Phuong trinh co nghiem x =' + (-b/a));
+            }
+        }
+    </script>
+</body>
+</html>
